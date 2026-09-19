@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header class="inner">
+			<input type="password" placeholder="MASTER KEY" class="key-field" id="master-key">
+			<label class="switch">
+				<input type="checkbox">
+				<span class="show-opt"></span>
+			</label>
+			<p class="warn-text">IF THE KEY IS INCORRECT PASSWORDS WILL NOT GET DECRYPTED CORRECTLY</p>
+		</header>
+		<main class="outer">
+			<div class="left">
+				<h2>GENERATOR</h2>
+				<input type="text" placeholder="ENTRY" class="entry-field" id="save-entry">
+				<table>
+					<tr>
+						<td>UPPERCASE</td>
+						<td>
+							<label class="switch">
+								<input type="checkbox" id="allow-upper" checked>
+								<span class="slider"></span>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>NUMBERS</td>
+						<td>
+							<label class="switch">
+								<input type="checkbox" id="allow-numbers" checked>
+								<span class="slider"></span>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>SYMBOLS</td>
+						<td>
+							<label class="switch">
+								<input type="checkbox" id="allow-symbols" checked>
+								<span class="slider"></span>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>LENGTH</td>
+						<td>
+							<input type="text" class="length-field" id="psw-length" oninput="only_numbers(this)">
+						</td>
+					</tr>
+				</table>
+				<button class="generator" onclick="generate()">GENERATE</button>
+			</div>
+			<div class="right">
+				<input type="password" class="psw-field" id="save-psw" placeholder="PASSWORD">
+				<label class="switch">
+					<input type="checkbox">
+					<span class="show-opt"></span>
+				</label><br />
+				<button class="save" onclick="save()">SAVE</button>
+			</div>
+			<div class="right inner">
+				<h2>FINDER</h2>
+				<input type="text" placeholder="ENTRY" class="entry-field" id="show-entry">
+				<br /><br />
+				<div>
+					<input type="password" class="psw-field" id="show-psw" placeholder="PASSWORD" disabled>
+					<label class="switch">
+						<input type="checkbox">
+						<span class="show-opt"></span>
+					</label><br />
+				</div>
+				<button class="find" onclick="get()">FIND</button>
+			</div>
+		</main>
+		<script src="main.js"></script>
+	</body>
+</html>

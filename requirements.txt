@@ -1,0 +1,2 @@
+pywebview==6.2.1
+cryptography==49.0.0

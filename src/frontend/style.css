@@ -1,0 +1,192 @@
+:root {
+	--inner-color: #464472;
+	--outer-color: #442769;
+	--bg-transp: #0003;
+}
+
+@keyframes field-extend {
+	0% { width: 25%; }
+	100% { width: 90%; }
+}
+
+body {
+	font-family: sans-serif;
+	color: white;
+}
+
+.outer {
+	background-color: var(--outer-color);
+	top: 15%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0 5%;
+	position: absolute;
+}
+
+.inner {
+	background-color: var(--inner-color);
+	margin: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+header.inner {
+	bottom: 85%;
+	padding: 5% 10%;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: white;
+}
+
+.key-field {
+	width: 40%;
+}
+
+.entry-field,.psw-field {
+	width: 25%;
+}
+
+input[type="text"],input[type="password"] {
+	border-radius: 0;
+	border-color: white;
+	border-style: solid;
+	color: white;
+	background-color: var(--bg-transp);
+	outline-style: none;
+}
+
+.warn-text {
+	color: red;
+	font-size: 40%;
+	text-align: center;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 35px;
+	height: 23px;
+}
+
+.switch > input[type="checkbox"] {
+	opacity: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #555;
+	transition: 0.3s;
+	border-radius: 36px;
+	border-color: white;
+	border-width: 2px;
+	border-style: solid;
+}
+
+.slider::before {
+	position: absolute;
+	content: "";
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: white;
+	top: 25%;
+	bottom: 25%;
+	left: 5%;
+	transition: 0.3s;
+}
+
+.switch>input[type="checkbox"]:checked + .slider {
+	background-color: #45AF88;
+}
+
+.switch>input[type="checkbox"]:checked + .slider::before {
+	transform: translateX(190%);
+}
+
+td {
+	padding: 5% 0;
+}
+
+.length-field {
+	width: 15%;
+}
+
+.right,.left {
+	position: absolute;
+}
+
+.right {
+	right: 0%;
+	top: 5%;
+}
+
+button {
+	color: white;
+	background: none;
+	border-color: white;
+	border-width: 2px;
+	border-radius: 0;
+	border-style: solid;
+	font-size: 150%;
+	margin: 2%;
+	padding: 2%;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+button:hover {
+	border-color: #FFF8CC;
+	color: #FFF8CC;
+}
+
+.save {
+	width: 30%;
+	font-size: 120%;
+}
+
+.psw-field {
+	width: 70%;
+}
+
+.show-opt {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	transition: 0.3s;
+	border-color: white;
+	border-width: 2px;
+	border-style: solid;
+	width: 50%;
+	font-size: 70%;
+}
+
+.switch>input[type="checkbox"]:checked + .show-opt {
+	background-color: #45AF88;
+}
+
+div.inner {
+	top: 25%;
+	left: 45%;
+	border-style: solid;
+	border-width: 2px 0 0 2px;
+	border-color: white;
+	padding: 2% 2%;
+}
+
+.psw-field[disabled] {
+	border-style: none;
+}
